@@ -17,6 +17,7 @@ public class AJDBCIntroduction {
     4. Create statement to pass the MySQL Db Query.
     5. Execute Query Through ResultSet
     6. Display the Output using while loop & next() inbuilt method of ResultSet
+    7. To Avoid the Memory leakage, Close the Connection of Connection, Statement & ResultSet
 
      */
     static String mysqlDBConnectorPath = "com.mysql.cj.jdbc.Driver"; // This is the default MYSQL Driver Path
@@ -125,5 +126,9 @@ public class AJDBCIntroduction {
             }
             System.out.println();
         }
+        createSQLConnection.close(); // createSQLConnection is the object of Connection Interface,To Avoid the Memory Leakage its always good practice to close connection
+        createSQLStatementExecute.close(); // createSQLStatementExecute is the object of Statement Interface, To Avoid the Memory Leakage its always good practice to close connection
+        displaySQLResultOutput.close(); // displaySQLResultOutput is the object of ResultSet Interface,To Avoid the Memory Leakage its always good practice to close connection
+
     }
 }
