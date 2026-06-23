@@ -14,7 +14,10 @@ public class AJDBCIntroduction {
     2. Download the MySQL JDBC Driver Jar File from https://dev.mysql.com/downloads/connector/j/, Download the Zip File & Extract the Zip File to Extract .jar File
     To Import MY SQL Connector In IntelliJ use the following steps -- Go to File Menu >>> Project Structure >> Modules >> Click on + icon and add the mySQL Connector Jar
     3. Load SQL Driver & Create Connection
-    4. Execute Query Through ResultSet
+    4. Create statement to pass the MySQL Db Query.
+    5. Execute Query Through ResultSet
+    6. Display the Output using while loop & next() inbuilt method of ResultSet
+
      */
     static String mysqlDBConnectorPath = "com.mysql.cj.jdbc.Driver"; // This is the default MYSQL Driver Path
     static String mysqlDBURL = "jdbc:mysql://localhost:3306/learnsqldetail";   // this is 	//
